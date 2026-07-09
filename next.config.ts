@@ -20,9 +20,6 @@ const nextConfig: NextConfig = {
 
   // Enable Turbopack (Next.js 16 default)
   turbopack: {},
-
-  // Static HTML export
-  output: "export",
 };
 
 export default nextConfig;
