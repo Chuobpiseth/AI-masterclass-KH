@@ -39,7 +39,11 @@ export function LoginForm() {
       return;
     }
 
-    const student = await validateAccessCode(normalizedCode);
+    // Capture basic device info
+    const deviceName = typeof window !== "undefined" ? 
+      `${navigator.platform} - ${navigator.userAgent.split(' ')[0]}` : "Unknown Device";
+
+    const student = await validateAccessCode(normalizedCode, deviceName);
 
     if (student) {
       login(student.name, student.code);
