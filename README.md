@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Masterclass KH | វគ្គ AI masterclass
 
-## Getting Started
+A modern, static, production-ready online learning platform designed specifically for an AI masterclass. Built with Next.js 15, React, Tailwind CSS, Framer Motion, and MDX. 
 
-First, run the development server:
+This platform uses a completely static architecture with no backend required, making it incredibly fast, secure, and free to host on Vercel or GitHub Pages.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- **Next.js 15 App Router:** Leveraging the latest Next.js features with Turbopack.
+- **Static First Architecture:** Fully static HTML export (`out/` directory). No database or API needed.
+- **MDX Content System:** Write lessons in Markdown/MDX with custom interactive components (YouTube embeds, PDFs, Prompt boxes, Code blocks).
+- **Access Code Authentication:** Simple, secure student login using pre-generated static access codes.
+- **Local First State:** Student progress and authentication state are securely persisted in local storage using Zustand.
+- **Premium Apple-Inspired Design:** Beautiful UI with glassmorphism, animated gradients, smooth Framer Motion transitions, and a dark/light mode toggle.
+- **Command Palette Search:** Instantly search through all lessons and topics using `Cmd+K`.
+- **Khmer Typography:** First-class support for Noto Sans Khmer font.
+
+## Project Structure
+
+```
+├── .env.example              # Environment variables template
+├── next.config.ts            # Next.js configuration (static export enabled)
+├── src/
+│   ├── app/                  # Next.js App Router (pages, layouts)
+│   ├── components/           # React Components
+│   │   ├── auth/             # Login forms
+│   │   ├── dashboard/        # Dashboard widgets (progress, continue learning)
+│   │   ├── layout/           # Sidebar, Header
+│   │   ├── lesson/           # Lesson viewer, navigation, reading progress
+│   │   ├── mdx/              # Custom MDX components
+│   │   ├── shared/           # Search, Theme toggle
+│   │   └── ui/               # shadcn/ui base components
+│   ├── content/              # MDX files containing all lessons
+│   ├── data/                 # JSON data (students, modules)
+│   ├── hooks/                # Custom React hooks
+│   ├── lib/                  # Utilities, auth logic, content loading
+│   ├── store/                # Zustand state management
+│   └── types/                # TypeScript definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Manage Content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Everything is managed via local files. You do not need to touch any React code to add students or update lessons.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Adding a Student
+Open `src/data/students.json` and add a new entry:
+```json
+{
+  "id": "s_003",
+  "name": "Jane Smith",
+  "code": "XYZ123AB",
+  "status": "active"
+}
+```
 
-## Learn More
+### 2. Creating a Lesson
+1. Go to `src/content/lessons/`
+2. Create a new folder for the module (if it doesn't exist).
+3. Create a `.mdx` file for the lesson (e.g., `my-lesson.mdx`).
+4. Write your content using standard markdown or custom components like `<Callout>`, `<YouTube>`, `<Prompt>`, etc.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Updating the Curriculum
+Open `src/data/modules.json` and map your new lesson into the curriculum structure:
+```json
+{
+  "id": "mod_1",
+  "title": "Module Title",
+  "slug": "module-slug",
+  "order": 1,
+  "lessons": [
+    {
+      "slug": "my-lesson",
+      "title": "My Lesson Title",
+      "description": "Short description",
+      "duration": "10 min",
+      "order": 1,
+      "keywords": ["ai", "prompt"]
+    }
+  ]
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Run development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) in your browser. 
+Use the access code `A7K9X2P4` to log in as a test student.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Because this project is completely static, it can be hosted anywhere.
+
+### Vercel (Recommended)
+1. Push this repository to GitHub.
+2. Import the project in Vercel.
+3. Vercel will automatically detect Next.js.
+4. Set the build command to `npm run build`.
+5. Deploy.
+
+### GitHub Pages
+1. Push the code to GitHub.
+2. Go to Settings > Pages.
+3. Choose GitHub Actions as the source.
+4. Use the Next.js workflow to build and deploy your static export.
+
+## Custom MDX Components Available
+
+You can use these directly in your `.mdx` files:
+- `<Callout type="info|warning|success|danger">`
+- `<YouTube id="video_id" />`
+- `<Prompt>`
+- `<Audio src="/path/to/audio.mp3" />`
+- `<PDFViewer url="/path/to/pdf.pdf" />`
+- `<CodeBlock language="python">`
+- `<Grid>` and `<Card>`

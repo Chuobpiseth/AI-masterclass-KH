@@ -1,0 +1,95 @@
+[
+  {
+    "id": "mod_ai-for-business",
+    "title": "Ai For Business",
+    "description": "",
+    "slug": "ai-for-business",
+    "order": 1,
+    "icon": "BookOpen",
+    "lessons": [
+      {
+        "slug": "ai-business-productivity",
+        "title": "AI for Business Productivity",
+        "description": "Discover how to integrate AI into your daily business workflows to save time and increase output.",
+        "duration": "10 min",
+        "order": 99,
+        "keywords": [],
+        "type": "reading"
+      },
+      {
+        "slug": "ai-content-creation",
+        "title": "AI Content Creation",
+        "description": "Use AI to create professional content — blog posts, social media, emails, and marketing copy.",
+        "duration": "10 min",
+        "order": 99,
+        "keywords": [],
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "mod_ai-marketing-growth",
+    "title": "Ai Marketing Growth",
+    "description": "",
+    "slug": "ai-marketing-growth",
+    "order": 2,
+    "icon": "BookOpen",
+    "lessons": [
+      {
+        "slug": "ai-marketing-strategies",
+        "title": "AI Marketing Strategies",
+        "description": "Learn proven AI-powered marketing strategies to grow your audience and increase revenue.",
+        "duration": "10 min",
+        "order": 99,
+        "keywords": [],
+        "type": "reading"
+      }
+    ]
+  },
+  {
+    "id": "mod_getting-started-with-ai",
+    "title": "Getting Started With Ai",
+    "description": "",
+    "slug": "getting-started-with-ai",
+    "order": 3,
+    "icon": "BookOpen",
+    "lessons": [
+      {
+        "slug": "advanced-prompt-engineering",
+        "title": "មេរៀន និងកម្រងគន្លឹះសរសេរ Prompt កម្រិតខ្ពស់",
+        "description": "AI Prompt Engineering Masterclass ដោយផ្អែកលើបច្ចេកទេសទំនើបៗ និងបទពិសោធន៍ជាក់ស្តែង ដើម្បីជួយឲ្យអ្នកបញ្ជា AI បានលទ្ធផលត្រឹមត្រូវ ចំគោលដៅ និងមានគុណភាពខ្ពស់បំផុត។",
+        "duration": "25 min",
+        "order": 99,
+        "keywords": [],
+        "type": "reading"
+      },
+      {
+        "slug": "chatgpt-fundamentals",
+        "title": "ChatGPT Fundamentals",
+        "description": "Master the basics of ChatGPT — from creating your account to having your first productive conversation.",
+        "duration": "10 min",
+        "order": 99,
+        "keywords": [],
+        "type": "reading"
+      },
+      {
+        "slug": "introduction-to-ai",
+        "title": "Introduction to AI",
+        "description": "Understand what AI is, how it works, and why it matters for your career and business.",
+        "duration": "10 min",
+        "order": 99,
+        "keywords": [],
+        "type": "reading"
+      },
+      {
+        "slug": "prompt-engineering-basics",
+        "title": "Prompt Engineering Basics",
+        "description": "Learn how to write effective prompts that get better results from any AI tool.",
+        "duration": "10 min",
+        "order": 99,
+        "keywords": [],
+        "type": "reading"
+      }
+    ]
+  }
+]
