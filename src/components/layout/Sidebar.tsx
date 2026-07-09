@@ -131,7 +131,7 @@ export function CourseSidebar({ onLessonClick }: CourseSidebarProps) {
                       <Icon className="h-4 w-4" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold truncate">
+                      <p className="text-sm font-semibold truncate" title={mod.title}>
                         {mod.title}
                       </p>
                       <p className="text-[10px] text-muted-foreground">
@@ -191,7 +191,7 @@ export function CourseSidebar({ onLessonClick }: CourseSidebarProps) {
                                       )}
                                     />
                                   )}
-                                  <span className="truncate">
+                                  <span className="truncate" title={lesson.title}>
                                     {lesson.title}
                                   </span>
                                 </Link>

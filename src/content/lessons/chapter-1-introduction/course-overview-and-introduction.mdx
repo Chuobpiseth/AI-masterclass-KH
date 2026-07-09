@@ -1,0 +1,287 @@
+---
+title: "ការណែនាំពីវគ្គសិក្សា និង ការណែនាំខ្លួន (Course Overview & Introduction)"
+description: "ស្វែងយល់ត្រួសៗអំពីគោលបំណងនៃវគ្គសិក្សា អ្វីដែលអ្នកនឹងទទួលបាន និងការរៀបចំឧបករណ៍ដែលចាំបាច់ដើម្បីចាប់ផ្តើមដំណើរនៃការសិក្សាមួយនេះប្រកបដោយភាពរលូន។"
+order: 1
+---
+
+<style>{`
+  @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;600;700&family=Outfit:wght@300;400;600;800&display=swap');
+
+  .custom-lesson-container {
+      font-family: 'Kantumruy Pro', 'Outfit', sans-serif;
+      line-height: 1.6;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      margin: -1rem; /* Adjust negative margin to fill the container */
+      
+      /* Light Mode */
+      background-image: 
+          radial-gradient(at 0% 0%, hsla(253, 16%, 97%, 1) 0, transparent 50%), 
+          radial-gradient(at 100% 100%, hsla(225, 39%, 92%, 0.6) 0, transparent 50%), 
+          radial-gradient(at 100% 0%, hsla(339, 49%, 95%, 0.6) 0, transparent 50%);
+      background-color: #f8fafc;
+      color: #0f172a;
+      transition: background-color 0.3s ease;
+  }
+
+  .dark .custom-lesson-container {
+      /* Dark Mode */
+      background-image: 
+          radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+          radial-gradient(at 100% 100%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+          radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+      background-color: #020617;
+      color: #f8fafc;
+  }
+
+  /* Custom Animations */
+  @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+  }
+
+  .animate-fade-in-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+  }
+
+  .animate-float {
+      animation: float 4s ease-in-out infinite;
+  }
+
+  /* Delays */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+
+  /* Glassmorphism Styles (Light/Dark Responsive) */
+  .glass-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.4s ease;
+  }
+
+  .dark .glass-card {
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-card:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 15px rgba(56, 189, 248, 0.2);
+  }
+
+  .dark .glass-card:hover {
+      background: rgba(30, 41, 59, 0.7);
+      border-color: rgba(56, 189, 248, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.1);
+  }
+
+  .gradient-text {
+      background: linear-gradient(to right, #38bdf8, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+  }
+  
+  .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+      margin: 4rem 0;
+  }
+  .dark .section-divider {
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+  }
+`}</style>
+
+<div className="custom-lesson-container antialiased">
+    <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        
+        {/* Header / Hero Section (Restored) */}
+        <header className="text-center mb-16 animate-fade-in-up">
+            <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700 text-sky-600 dark:text-sky-400 text-sm font-semibold tracking-widest uppercase">
+                ជំពូកទី ១ • មេរៀនទី ១
+            </div>
+            <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-slate-900 dark:text-white" style={{ lineHeight: '1.8' }}>
+                ការណែនាំពីវគ្គសិក្សា <br className="hidden md:block"/><span className="mt-8 block gradient-text">& ការណែនាំខ្លួន</span>
+            </h1>
+            <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-3xl mx-auto">
+                សូមស្វាគមន៍មកកាន់វគ្គសិក្សា <strong>AI MasterClass KH: បង្កើតមាតិកា និងបង្កើនប្រសិទ្ធភាពការងារជាមួយ AI</strong>! 
+            </p>
+        </header>
+
+        <div className="section-divider animate-fade-in-up delay-100"></div>
+
+        {/* 1. Instructor Introduction Section */}
+        <section className="mb-20 animate-fade-in-up delay-200">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                <span className="text-sky-500 dark:text-sky-400">១.</span> ការណែនាំខ្លួន (Instructor Introduction)
+            </h2>
+            
+            <div className="glass-card rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <div className="relative w-48 h-64 md:w-64 md:h-80 shrink-0 group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-sky-400 to-purple-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                    <img src="/assets/profile.jpg" alt="Chuob Piseth" className="relative w-full h-full object-cover rounded-2xl border-4 border-white dark:border-slate-800 shadow-2xl" />
+                </div>
+                
+                <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">ជួប ពិសិដ្ឋ <span className="text-xl text-slate-500 dark:text-slate-400 font-['Outfit']">(Chuob Piseth)</span></h3>
+                    <p className="text-sky-600 dark:text-sky-400 font-medium mb-4">IT Officer | Content Creator | Business Owner</p>
+                    
+                    <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+                        ខ្ញុំគឺជាអ្នកជំនាញដែលរួមបញ្ចូលនូវចំណេះដឹងផ្នែកបច្ចេកវិទ្យា និងការបង្កើតមាតិកាឌីជីថល។ បច្ចុប្បន្នខ្ញុំកំពុងបម្រើការងារជាមន្ត្រីផ្នែកព័ត៌មានវិទ្យា (IT Officer) នៅក្រុមហ៊ុនឯកជនមួយ និងជាម្ចាស់អាជីវកម្មផ្ទាល់ខ្លួន។ ខ្ញុំតែងតែប្រើប្រាស់បច្ចេកវិទ្យា AI យ៉ាងសកម្មដើម្បីស្វ័យប្រវត្តិកម្មការងារ កាត់បន្ថយពេលវេលា និងបង្កើតមាតិកាប្រកបដោយភាពច្នៃប្រឌិតខ្ពស់។
+                    </p>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div className="bg-slate-100 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-200 dark:border-slate-700/50 text-left">
+                            <h4 className="text-fuchsia-600 dark:text-fuchsia-400 text-sm font-semibold mb-2 uppercase tracking-wider">ការសិក្សា (Education)</h4>
+                            <p className="text-slate-800 dark:text-white text-sm">បរិញ្ញាបត្រផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រ (Bachelor of Computer Science) ឆ្នាំ ២០២៤</p>
+                        </div>
+                        <div className="bg-slate-100 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-200 dark:border-slate-700/50 text-left">
+                            <h4 className="text-sky-600 dark:text-sky-400 text-sm font-semibold mb-2 uppercase tracking-wider">ជំនាញ (Skills)</h4>
+                            <div className="flex flex-wrap gap-2 mt-1">
+                                <span className="px-2 py-1 bg-slate-200 dark:bg-slate-700/50 rounded text-xs text-slate-700 dark:text-slate-200">Vibe Coding</span>
+                                <span className="px-2 py-1 bg-slate-200 dark:bg-slate-700/50 rounded text-xs text-slate-700 dark:text-slate-200">System Admin</span>
+                                <span className="px-2 py-1 bg-slate-200 dark:bg-slate-700/50 rounded text-xs text-slate-700 dark:text-slate-200">Designing</span>
+                                <span className="px-2 py-1 bg-slate-200 dark:bg-slate-700/50 rounded text-xs text-slate-700 dark:text-slate-200">Media</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* 2. Course Overview Section */}
+        <section className="mb-20 animate-fade-in-up delay-300">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                <span className="text-purple-500 dark:text-purple-400">២.</span> ទិដ្ឋភាពទូទៅនៃវគ្គសិក្សា (Course Overview)
+            </h2>
+            <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-4xl text-left">ពេញមួយវគ្គសិក្សានេះ យើងនឹងស្វែងយល់យ៉ាងស៊ីជម្រៅអំពីការប្រើប្រាស់ AI (ដូចជា ChatGPT, Gemini, Claude, DeepSeek, Suno ជាដើម) ដើម្បីបង្កើតមាតិកាគ្រប់ទម្រង់។ តើអ្នកនឹងរៀនអ្វីខ្លះ?</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="glass-card rounded-2xl p-6 relative overflow-hidden group text-left">
+                    <div className="w-12 h-12 bg-sky-100 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">មូលដ្ឋានគ្រឹះនៃ AI</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">ស្វែងយល់ពីដំណើរការរបស់ AI និងរបៀបប្រើប្រាស់ AI ល្បីៗប្រកបដោយប្រសិទ្ធភាពបំផុត។</p>
+                </div>
+                
+                <div className="glass-card rounded-2xl p-6 relative overflow-hidden group text-left">
+                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">ផលិតរូបភាព & វីដេអូ</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">បង្កើត Poster, Banner ផ្សព្វផ្សាយ, វីដេអូពាណិជ្ជកម្ម និងភាពយន្តខ្លីដោយប្រើ AI។</p>
+                </div>
+                
+                <div className="glass-card rounded-2xl p-6 relative overflow-hidden group text-left">
+                    <div className="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-500/20 text-fuchsia-600 dark:text-fuchsia-400 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">តន្ត្រី & សំឡេង (Suno)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">បង្កើតបទចម្រៀងគុណភាពខ្ពស់ និងរៀនពីរបៀបដាក់លក់នៅលើ DistroKid។</p>
+                </div>
+                
+                <div className="glass-card rounded-2xl p-6 relative overflow-hidden group text-left">
+                    <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">ការសរសេរ (Content)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">សរសេរ Caption លក់ទំនិញ អត្ថបទប្លុក និងប្រើ AI ដើម្បីជួយស្រាវជ្រាវទិន្នន័យ។</p>
+                </div>
+                
+                <div className="glass-card rounded-2xl p-6 relative overflow-hidden group text-left">
+                    <div className="w-12 h-12 bg-rose-100 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Vibe Coding & Web</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">សរសេរកូដតាមរយៈការបញ្ជាជាភាសាសាមញ្ញ ដើម្បីបង្កើតកម្មវិធី ឬវេបសាយផ្ទាល់ខ្លួន។</p>
+                </div>
+                
+                <div className="glass-card rounded-2xl p-6 relative overflow-hidden group text-left">
+                    <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">វិធីសាស្ត្រផ្សេងៗ (Tips & Tricks)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">គន្លឹះពិសេសៗ និងវិធីសាស្ត្រប្រើប្រាស់ AI ឲ្យកាន់តែមានប្រសិទ្ធភាព និងចំណេញពេលវេលា។</p>
+                </div>
+            </div>
+        </section>
+
+        {/* 3. Preparation Section */}
+        <section className="animate-fade-in-up delay-400">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3 text-slate-900 dark:text-slate-100">
+                <span className="text-fuchsia-500 dark:text-fuchsia-400">៣.</span> ការរៀបចំខ្លួន និងឧបករណ៍ចាំបាច់
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="glass-card rounded-2xl p-6 group text-left">
+                    <div className="w-12 h-12 rounded-lg bg-sky-100 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4 group-hover:bg-sky-200 dark:group-hover:bg-sky-500/20 transition-colors animate-float">
+                        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">កុំព្យូទ័រ (Laptop/Desktop)</h3>
+                    <span className="inline-block bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 text-[10px] px-2 py-0.5 rounded border border-green-300 dark:border-green-500/30 mb-2 uppercase font-bold tracking-wider">Highly Recommended</span>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">ឧបករណ៍ AI ភាគច្រើនងាយស្រួលប្រើប្រាស់នៅលើអេក្រង់ធំ និងមានមុខងារពេញលេញ។</p>
+                </div>
+
+                <div className="glass-card rounded-2xl p-6 group text-left">
+                    <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-4 group-hover:bg-purple-200 dark:group-hover:bg-purple-500/20 transition-colors animate-float" style={{animationDelay: '0.5s'}}>
+                        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">ទូរស័ព្ទដៃ (Smartphone)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">ប្រើសម្រាប់មើលវីដេអូមេរៀន ចូលអានឯកសារគ្រប់ទីកន្លែង និងប្រើមុខងារ AI មួយចំនួន។</p>
+                </div>
+
+                <div className="glass-card rounded-2xl p-6 group text-left">
+                    <div className="w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-500/10 text-pink-600 dark:text-pink-400 flex items-center justify-center mb-4 group-hover:bg-pink-200 dark:group-hover:bg-pink-500/20 transition-colors animate-float" style={{animationDelay: '1s'}}>
+                        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">អ៊ិនធឺណិត (Internet)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">ការតភ្ជាប់ដែលមានស្ថេរភាព ដើម្បីទាញយករូបភាព និងដំណើរការ Web Portal បានលឿន។</p>
+                </div>
+
+                <div className="glass-card rounded-2xl p-6 group text-left">
+                    <div className="w-12 h-12 rounded-lg bg-yellow-100 dark:bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4 group-hover:bg-yellow-200 dark:group-hover:bg-yellow-500/20 transition-colors animate-float" style={{animationDelay: '0.2s'}}>
+                        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">គណនី Gmail (Google)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">សំខាន់បំផុតសម្រាប់ចុះឈ្មោះចូលប្រើប្រាស់ (Sign Up) គេហទំព័រ និងកម្មវិធី AI នានា។</p>
+                </div>
+
+                <div className="glass-card rounded-2xl p-6 group text-left">
+                    <div className="w-12 h-12 rounded-lg bg-emerald-100 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-500/20 transition-colors animate-float" style={{animationDelay: '0.7s'}}>
+                        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">លេខកូដសិស្ស (Secret Code)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">សម្រាប់ Log in ចូលមកអានមេរៀននៅក្នុង Web Portal (Next.js) ផ្ទាល់ខ្លួនរបស់អ្នក។</p>
+                </div>
+                
+                <div className="glass-card rounded-2xl p-6 group text-left">
+                    <div className="w-12 h-12 rounded-lg bg-fuchsia-100 dark:bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400 flex items-center justify-center mb-4 group-hover:bg-fuchsia-200 dark:group-hover:bg-fuchsia-500/20 transition-colors animate-float" style={{animationDelay: '1.2s'}}>
+                        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">ឆន្ទៈ (Mindset)</h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm">ហ៊ានសាកល្បងចុច សរសេរបញ្ជា (Prompt) និងកុំខ្លាចខុសក្នុងពេលអនុវត្តជាក់ស្តែង។</p>
+                </div>
+            </div>
+        </section>
+
+        {/* Footer / Next Action */}
+
+    </div>
+</div>
