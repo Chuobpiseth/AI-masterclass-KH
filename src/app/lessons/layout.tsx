@@ -36,7 +36,7 @@ export default function LessonsLayout({
     <div className="flex min-h-screen flex-col">
       <Header />
       <div className="flex flex-1">
-        <aside className="hidden lg:block w-80 shrink-0">
+        <aside className="hidden lg:block w-[26rem] shrink-0">
           <div className="sticky top-16 h-[calc(100vh-4rem)]">
             <CourseSidebar />
           </div>

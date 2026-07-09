@@ -1,0 +1,185 @@
+---
+title: "ស្វែងយល់ស៊ីជម្រៅពីបញ្ញាសិប្បនិម្មិត (AI)"
+description: "តើ AI ជាអ្វី? តើវាដំណើរការយ៉ាងដូចម្តេច? និងការលាតត្រដាងកំពូលអាវុធ (AI Tools) ទាំង ៥០"
+order: 1
+---
+
+<style>{`
+  .animate-fade-in-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+  }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+
+  .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      transition: all 0.3s ease;
+  }
+  .dark .glass-card {
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-card:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 15px rgba(56, 189, 248, 0.2);
+  }
+  .dark .glass-card:hover {
+      background: rgba(30, 41, 59, 0.6);
+      border-color: rgba(56, 189, 248, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.1);
+  }
+
+  .gradient-text {
+      background: linear-gradient(to right, #38bdf8, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+  }
+
+  .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+      margin: 4rem 0;
+  }
+  .dark .section-divider {
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+  }
+`}</style>
+
+<div className="custom-lesson-container antialiased pb-20">
+    <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <header className="text-center mb-16 animate-fade-in-up">
+            <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700 text-sky-600 dark:text-sky-400 text-sm font-semibold tracking-widest uppercase">
+                ជំពូកទី ២ • មេរៀនទី ១
+            </div>
+            <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-slate-900 dark:text-white" style={{ lineHeight: '1.8' }}>
+                ស្វែងយល់ស៊ីជម្រៅពី <br className="hidden md:block"/><span className="mt-8 block gradient-text">បញ្ញាសិប្បនិម្មិត (AI)</span>
+            </h1>
+            <div className="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-3xl mx-auto">
+                តើ AI ជាអ្វី? តើវាដំណើរការយ៉ាងដូចម្តេច? និងការលាតត្រដាងកំពូលអាវុធ (AI Tools) ទាំង ៥០ ដែលកំពុងអង្រួនពិភពលោកក្នុងឆ្នាំ ២០២៦ នេះ។
+            </div>
+        </header>
+
+        {/* Part 1: What is AI & How it works */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 animate-fade-in-up delay-100">
+            <div className="glass-card rounded-2xl p-8">
+                <h2 className="text-2xl font-bold text-sky-500 dark:text-sky-400 mb-4">១. តើអ្វីទៅជា AI?</h2>
+                <div className="text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
+                    <strong>AI (បញ្ញាសិប្បនិម្មិត)</strong> ប្រៀបដូចជាខួរក្បាលកុំព្យូទ័រដែលត្រូវបានគេបង្រៀនឱ្យចេះគិត វិភាគ និងដោះស្រាយបញ្ហាដូចមនុស្សដែរ។
+                </div>
+                <div className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    ជាជាងការធ្វើតាមការបញ្ជាគ្រប់ជំហាន វាអាចរៀនសូត្រពីទិន្នន័យចាស់ៗ ដើម្បីយល់ដឹង និងធ្វើការសម្រេចចិត្តដោយខ្លួនឯងយ៉ាងឆ្លាតវៃ។
+                </div>
+
+                <div className="mt-8">
+                    <img src="/assets/ai_flow_concept.png" alt="AI Ecosystem Flow" className="rounded-xl shadow-lg border border-white/10" />
+                </div>
+            </div>
+
+            <div className="glass-card rounded-2xl p-8">
+                <h2 className="text-2xl font-bold text-purple-500 dark:text-purple-400 mb-4">២. ដំណើរការរបស់ AI</h2>
+                <ul className="space-y-6">
+                    <li className="flex gap-3">
+                        <span className="text-sky-500 dark:text-sky-400 font-bold text-lg">១.</span>
+                        <div>
+                            <strong className="text-slate-900 dark:text-white text-lg">ការផ្តល់ទិន្នន័យ (Data)</strong>
+                            <div className="text-slate-600 dark:text-slate-400 text-sm mt-1">គេផ្តល់ទិន្នន័យរាប់លាន (អត្ថបទ រូបភាព សំឡេង) ឱ្យវាអាន ដើម្បីឱ្យវាស្គាល់ពីពិភពលោក។</div>
+                        </div>
+                    </li>
+                    <li className="flex gap-3">
+                        <span className="text-sky-500 dark:text-sky-400 font-bold text-lg">២.</span>
+                        <div>
+                            <strong className="text-slate-900 dark:text-white text-lg">ការហ្វឹកហាត់ (Training)</strong>
+                            <div className="text-slate-600 dark:text-slate-400 text-sm mt-1">វាប្រើរូបមន្តគណិតវិទ្យាដើម្បីទាញរកភាពស្រដៀងគ្នា និងចងចាំពីទម្រង់នៃទិន្នន័យទាំងនោះ។</div>
+                        </div>
+                    </li>
+                    <li className="flex gap-3">
+                        <span className="text-sky-500 dark:text-sky-400 font-bold text-lg">៣.</span>
+                        <div>
+                            <strong className="text-slate-900 dark:text-white text-lg">ការផ្តល់លទ្ធផល (Prediction)</strong>
+                            <div className="text-slate-600 dark:text-slate-400 text-sm mt-1">ពេលអ្នកសួរសំណួរ វានឹងវិភាគ និងទស្សន៍ទាយចម្លើយដែលត្រឹមត្រូវបំផុតតបមកវិញភ្លាមៗ។</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        {/* Part 2: Future & Pros/Cons */}
+        <section className="mb-20 animate-fade-in-up delay-200">
+            <h2 className="text-3xl font-bold mb-8 text-center text-slate-900 dark:text-white"><span className="text-fuchsia-500 dark:text-fuchsia-400">អនាគតរបស់ AI</span> និង គុណសម្បត្តិ/គុណវិបត្តិ</h2>
+            
+            <div className="glass-card rounded-2xl p-8 mb-8 border-l-4 border-l-fuchsia-500 dark:border-l-fuchsia-500">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">បច្ចុប្បន្ន (2026) ឆ្ពោះទៅកាន់ឆ្នាំ (2050)</h3>
+                <div className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                    នៅក្នុងឆ្នាំ ២០២៦ នេះ AI លែងត្រឹមតែជា "អ្នកឆ្លើយសំណួរ" (Chatbot) ទៀតហើយ តែវាបានក្លាយជា <strong>"ភ្នាក់ងារ" (AI Agents)</strong> ដែលជួយការងារប្រចាំថ្ងៃយ៉ាងសកម្ម។ ចាប់ពីឆ្នាំ ២០២៧ រហូតដល់ ២០៥០ ពិភពលោកនឹងអាចឃើញការវិវត្តន៍ដ៏អស្ចារ្យ៖
+                </div>
+                <ul className="list-disc pl-6 text-slate-700 dark:text-slate-300 space-y-2">
+                    <li><strong>AGI (Artificial General Intelligence):</strong> កំណើត AI ដែលមានភាពឆ្លាតវៃស្មើ ឬជាងមនុស្សលើគ្រប់វិស័យ។</li>
+                    <li><strong>ការរស់នៅប្រចាំថ្ងៃ៖</strong> ទីក្រុងឆ្លាតវៃ (Smart Cities), រថយន្តបើកបរដោយខ្លួនឯង ១០០%, និងមនុស្សយន្តជំនួយការនៅតាមផ្ទះ។</li>
+                    <li><strong>សុខាភិបាល៖</strong> ការរកឃើញថ្នាំថ្មីៗបានលឿន ការព្យាបាលតាមហ្សែន និងការប្រើប្រាស់បន្ទះឈីបតភ្ជាប់ខួរក្បាល (Brain-Computer Interfaces) ដែលជួយដល់ជនពិការ។</li>
+                </ul>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Pros */}
+                <div className="glass-card rounded-2xl p-6 bg-emerald-50 dark:bg-emerald-900/10 border-emerald-200 dark:border-emerald-500/30">
+                    <h3 className="text-xl font-bold text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        គុណសម្បត្តិ (Pros)
+                    </h3>
+                    <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+                        <li><strong className="text-emerald-600 dark:text-emerald-300">ការច្នៃប្រឌិត (Creative):</strong> ផ្តល់គំនិតថ្មីៗ ហើយវាអាចផលិតរូបភាព, តន្ត្រី, វីដេអូ, កូដកុំព្យូទ័រ និងធ្វើរឿងច្នៃប្រឌិតជាច្រើនទៀតដោយស្វ័យប្រវត្តិ។</li>
+                        <li><strong className="text-emerald-600 dark:text-emerald-300">ស្វ័យប្រវត្តិកម្ម (Automation):</strong> អាចធ្វើការងារគ្រប់យ៉ាង គ្រប់គ្រងប្រព័ន្ធ ច្រើនតំណាក់កាល និងជំនួសការងារដដែលៗ (Routine tasks) ដោយមិនចាំបាច់មានការចូលរួមពីមនុស្ស។</li>
+                        <li><strong className="text-emerald-600 dark:text-emerald-300">ល្បឿន:</strong> ធ្វើការងារដែលមនុស្សត្រូវប្រើពេលរាប់ម៉ោង ឱ្យចប់ក្នុងរយៈពេលត្រឹមប៉ុន្មានវិនាទីប៉ុណ្ណោះ។</li>
+                        <li><strong className="text-emerald-600 dark:text-emerald-300">ធ្វើការ 24/7:</strong> មិនចេះហត់នឿយ មិនឈប់សម្រាក ជួយក្រុមហ៊ុននិងស្ថាប័នឱ្យដំណើរការបានរលូនពេញម៉ោង។</li>
+                    </ul>
+                </div>
+                {/* Cons */}
+                <div className="glass-card rounded-2xl p-6 bg-rose-50 dark:bg-rose-900/10 border-rose-200 dark:border-rose-500/30">
+                    <h3 className="text-xl font-bold text-rose-600 dark:text-rose-400 mb-4 flex items-center gap-2">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        គុណវិបត្តិ (Cons)
+                    </h3>
+                    <ul className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+                        <li><strong className="text-rose-600 dark:text-rose-300">ការបោកប្រាស់ (Scams):</strong> ជនខិលខូចតែងយក AI ទៅចម្លងសំឡេង (Voice Clone) របស់អ្នកណាម្នាក់ ដើម្បីទូរសព្ទទៅបោកលុយគ្រួសារគេជាដើម។</li>
+                        <li><strong className="text-rose-600 dark:text-rose-300">Deepfakes និងផ្លូវច្បាប់:</strong> ការបង្កើតវីដេអូ ឬរូបភាពកាត់តក្លែងក្លាយ (Deepfake) ធ្វើឱ្យខូចកេរ្តិ៍ឈ្មោះអ្នកដទៃ ដែលជារឿងខុសច្បាប់ (National Law)។</li>
+                        <li><strong className="text-rose-600 dark:text-rose-300">ឧក្រិដ្ឋកម្មបច្ចេកវិទ្យា:</strong> ប្រើ AI ដើម្បីសរសេរកូដសម្រាប់ Hack ចូលប្រព័ន្ធកុំព្យូទ័រក្រុមហ៊ុន ឬអង្គការផ្សេងៗ។</li>
+                        <li><strong className="text-rose-600 dark:text-rose-300">ព័ត៌មានមិនពិត (Hallucination):</strong> បង្កើតព័ត៌មានមិនពិតប្រាកដ ឬខុសឆ្គងទាំងស្រុង ដែលអាចធ្វើឱ្យអ្នកអានមានការភាន់ច្រឡំ។</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div className="section-divider animate-fade-in-up delay-300"></div>
+
+        {/* Part 3: Top 50 AI Tools (Interactive Tabs using React Component) */}
+        <section className="animate-fade-in-up delay-400">
+            <h2 className="text-3xl font-bold mb-4 text-center text-slate-900 dark:text-white">កំពូល <span className="gradient-text">AI ទាំង ៥០</span> ជុំវិញពិភពលោក</h2>
+            <div className="text-center text-slate-600 dark:text-slate-400 mb-8">ជ្រើសរើសប្រភេទខាងក្រោម ដើម្បីស្វែងរកឧបករណ៍ AI ដែលស័ក្តិសមនឹងការងាររបស់អ្នក។</div>
+
+            <Top50AITabs />
+        </section>
+
+        {/* Conclusion */}
+        <div className="mt-16 glass-card rounded-2xl p-6 text-center animate-fade-in-up delay-400">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">សេចក្តីសន្និដ្ឋាន</h3>
+            <div className="text-slate-700 dark:text-slate-300">
+                AI មិនមែនមកដើម្បីដណ្តើមការងាររបស់អ្នកនោះទេ ប៉ុន្តែ <strong>"មនុស្សដែលចេះប្រើ AI"</strong> នឹងយកឈ្នះមនុស្សដែលមិនចេះប្រើវា។ នៅក្នុងមេរៀនបន្ទាប់ (Lesson 2: Prompt) យើងនឹងចាប់ផ្តើមរៀនពីរបៀប "សរសេរបញ្ជា" AI ទាំងនេះឱ្យធ្វើការឱ្យយើង!
+            </div>
+        </div>
+
+    </div>
+</div>

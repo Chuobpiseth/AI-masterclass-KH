@@ -52,6 +52,12 @@ export default function RootLayout({
     <html lang="km" suppressHydrationWarning>
       <body className={`${kantumruy.variable} font-sans antialiased`} suppressHydrationWarning>
         <Providers>{children}</Providers>
+        {/* Disable right-click script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener('contextmenu', event => event.preventDefault());`,
+          }}
+        />
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+"use server";
+
 import studentsData from "@/data/students.json";
 import type { Student } from "@/types";
 
@@ -7,7 +9,7 @@ const students: Student[] = studentsData as Student[];
  * Validate a student access code.
  * Returns the student if found and active, or null.
  */
-export function validateAccessCode(code: string): Student | null {
+export async function validateAccessCode(code: string): Promise<Student | null> {
   const normalizedCode = code.trim().toUpperCase();
   const student = students.find(
     (s) => s.code === normalizedCode && s.status === "active"
@@ -18,7 +20,7 @@ export function validateAccessCode(code: string): Student | null {
 /**
  * Check if an access code exists (regardless of status)
  */
-export function codeExists(code: string): boolean {
+export async function codeExists(code: string): Promise<boolean> {
   const normalizedCode = code.trim().toUpperCase();
   return students.some((s) => s.code === normalizedCode);
 }
@@ -26,7 +28,7 @@ export function codeExists(code: string): boolean {
 /**
  * Get student by code
  */
-export function getStudentByCode(code: string): Student | null {
+export async function getStudentByCode(code: string): Promise<Student | null> {
   const normalizedCode = code.trim().toUpperCase();
   return students.find((s) => s.code === normalizedCode) || null;
 }

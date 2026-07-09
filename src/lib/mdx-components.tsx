@@ -13,6 +13,7 @@ import {
   CodeBlock,
   AIIcon,
 } from "@/components/mdx";
+import { Top50AITabs } from "@/components/lessons/Top50AITabs";
 
 export function getMDXComponents(): MDXComponents {
   return {
@@ -29,6 +30,7 @@ export function getMDXComponents(): MDXComponents {
     Quiz,
     CodeBlock,
     AIIcon,
+    Top50AITabs,
 
     // Override default HTML elements with styled versions
     h1: (props) => (

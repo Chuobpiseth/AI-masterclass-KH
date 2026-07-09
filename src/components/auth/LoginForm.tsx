@@ -39,14 +39,14 @@ export function LoginForm() {
       return;
     }
 
-    const student = validateAccessCode(normalizedCode);
+    const student = await validateAccessCode(normalizedCode);
 
     if (student) {
       login(student.name, student.code);
       router.push("/dashboard");
     } else {
       // Check if code exists but is inactive
-      const existingStudent = getStudentByCode(normalizedCode);
+      const existingStudent = await getStudentByCode(normalizedCode);
       if (existingStudent && existingStudent.status !== "active") {
         setError(t("deactivatedCode"));
       } else {

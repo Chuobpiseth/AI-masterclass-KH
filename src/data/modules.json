@@ -17,5 +17,28 @@
         "type": "reading"
       }
     ]
+  },
+  {
+    "id": "mod_chapter-2-understanding-ai",
+    "title": "ជំពូកទី ២៖ AI & Prompt",
+    "description": "",
+    "slug": "chapter-2-understanding-ai",
+    "order": 2,
+    "icon": "Brain",
+    "lessons": [
+      {
+        "slug": "what-is-ai-and-top-50-tools",
+        "title": "ស្វែងយល់ពីបញ្ញាសិប្បនិម្មិត (AI)",
+        "description": "តើ AI ជាអ្វី? តើវាដំណើរការយ៉ាងដូចម្តេច? និងការលាតត្រដាងកំពូលអាវុធ (AI Tools) ទាំង ៥០",
+        "duration": "15 min",
+        "order": 1,
+        "keywords": [
+          "ai",
+          "tools",
+          "top 50"
+        ],
+        "type": "reading"
+      }
+    ]
   }
 ]
