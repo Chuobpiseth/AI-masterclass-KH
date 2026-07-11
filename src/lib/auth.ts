@@ -31,6 +31,8 @@ export async function validateAccessCode(code: string, deviceName: string = "Unk
     const data = await response.json();
     if (data.success && data.student) {
       return data.student as Student;
+    } else {
+      console.error("Google Sheets API failed:", data);
     }
     return null;
   } catch (error) {
