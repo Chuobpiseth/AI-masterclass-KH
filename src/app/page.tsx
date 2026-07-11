@@ -58,9 +58,7 @@ export default function LoginPage() {
           transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
           className="flex justify-center mb-5"
         >
-          <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-primary/60 shadow-2xl shadow-primary/30">
-            <Sparkles className="h-10 w-10 text-primary-foreground" />
-          </div>
+          <img src="/assets/logo.png" alt="Logo" className="h-24 w-24 rounded-full object-cover shadow-2xl shadow-primary/30" />
         </motion.div>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl mb-2">
           {siteConfig.name}

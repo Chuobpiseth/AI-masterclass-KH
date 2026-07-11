@@ -14,6 +14,7 @@ import {
   AIIcon,
 } from "@/components/mdx";
 import { Top50AITabs } from "@/components/lessons/Top50AITabs";
+import { Top50PromptsTabs } from "@/components/lessons/Top50PromptsTabs";
 
 export function getMDXComponents(): MDXComponents {
   return {
@@ -31,7 +32,7 @@ export function getMDXComponents(): MDXComponents {
     CodeBlock,
     AIIcon,
     Top50AITabs,
-
+    Top50PromptsTabs,
     // Override default HTML elements with styled versions
     h1: (props) => (
       <h1

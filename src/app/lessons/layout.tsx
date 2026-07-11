@@ -6,6 +6,7 @@ import { useAuthStore } from "@/store/auth-store";
 import { useHydration } from "@/hooks/use-hydration";
 import { Header } from "@/components/layout/Header";
 import { CourseSidebar } from "@/components/layout/Sidebar";
+import { useSidebarStore } from "@/store/sidebar-store";
 
 export default function LessonsLayout({
   children,
@@ -13,6 +14,7 @@ export default function LessonsLayout({
   children: React.ReactNode;
 }) {
   const { isAuthenticated } = useAuthStore();
+  const { isOpen: isSidebarOpen } = useSidebarStore();
   const router = useRouter();
   const hydrated = useHydration();
 
@@ -36,11 +38,13 @@ export default function LessonsLayout({
     <div className="flex min-h-screen flex-col">
       <Header />
       <div className="flex flex-1">
-        <aside className="hidden lg:block w-[26rem] shrink-0">
-          <div className="sticky top-16 h-[calc(100vh-4rem)]">
-            <CourseSidebar />
-          </div>
-        </aside>
+        {isSidebarOpen && (
+          <aside className="hidden lg:block w-[26rem] shrink-0">
+            <div className="sticky top-16 h-[calc(100vh-4rem)]">
+              <CourseSidebar />
+            </div>
+          </aside>
+        )}
         <main className="flex-1 min-w-0">{children}</main>
       </div>
     </div>

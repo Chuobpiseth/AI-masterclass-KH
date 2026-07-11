@@ -1,0 +1,176 @@
+---
+title: "ពាក្យបញ្ជារ (Prompt)"
+description: "ស្វែងយល់ពីគន្លឹះ រូបមន្ត និងកម្រង Prompt ទាំង ៥០ ដើម្បីបញ្ជា AI ឱ្យធ្វើការជំនួសអ្នកបានយ៉ាងត្រឹមត្រូវ។"
+order: 2
+---
+
+<style>{`
+  .animate-fade-in-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+  }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+
+  .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      transition: all 0.3s ease;
+  }
+  .dark .glass-card {
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-card:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 15px rgba(56, 189, 248, 0.2);
+  }
+  .dark .glass-card:hover {
+      background: rgba(30, 41, 59, 0.6);
+      border-color: rgba(56, 189, 248, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.1);
+  }
+
+  .gradient-text {
+      background: linear-gradient(to right, #38bdf8, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+  }
+
+  .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+      margin: 4rem 0;
+  }
+  .dark .section-divider {
+      background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+  }
+`}</style>
+
+<div className="custom-lesson-container antialiased pb-20">
+    <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        
+        {/* Header Section */}
+        <header className="text-center mb-16 animate-fade-in-up">
+            <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700 text-purple-600 dark:text-purple-400 text-sm font-semibold tracking-widest uppercase">
+                ជំពូកទី ២ • មេរៀនទី ២
+            </div>
+            <h1 className="mt-4 text-4xl md:text-5xl lg:text-7xl font-bold mb-6 font-['Outfit'] text-slate-900 dark:text-white" style={{ lineHeight: '1.4' }}>
+                <span className="gradient-text">Prompt</span>
+            </h1>
+        </header>
+
+        {/* 1. What is Prompt */}
+        <section className="mb-16 animate-fade-in-up delay-100">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-slate-900 dark:text-white">
+                <span className="text-sky-500 dark:text-sky-400">១.</span> តើអ្វីទៅជា Prompt?
+            </h2>
+            <div className="glass-card rounded-2xl p-6 md:p-8">
+                <div className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                    <strong className="text-slate-900 dark:text-white">Prompt</strong> គឺជាសារ ឬការណែនាំដែលអ្នកសរសេរឲ្យ AI ដឹងថា <strong>“ត្រូវធ្វើអ្វី, សម្រាប់អ្វី, និងចេញលទ្ធផលបែបណា”</strong>។ 
+                </div>
+                <div className="text-slate-600 dark:text-slate-400">
+                    ការសរសេរ Prompt ឲ្យច្បាស់ មាន Context (បរិបទ) និងបញ្ជាក់ Format នឹងជួយឲ្យលទ្ធផលត្រឹមត្រូវជាងមុន។ Prompt កាន់តែលម្អិត AI កាន់តែយល់កាន់តែច្បាស់ ប៉ុន្តែមិនចាំបាច់វែងអត់ប្រយោជន៍ទេ សំខាន់គឺ <strong>“ច្បាស់ និងពាក់ព័ន្ធ”</strong>។ ការផ្តល់ឧទាហរណ៍ ឬ Sample output ក៏ជួយឲ្យ AI ចេញចម្លើយតាមទម្រង់ដែលអ្នកចង់បានផងដែរ។
+                </div>
+            </div>
+        </section>
+
+        {/* 2. How to write Prompt & Rules */}
+        <section className="mb-16 animate-fade-in-up delay-200">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-slate-900 dark:text-white">
+                <span className="text-purple-500 dark:text-purple-400">២.</span> របៀបសរសេរ Prompt (រូបមន្ត & គន្លឹះ)
+            </h2>
+            <div className="glass-card rounded-2xl p-6 md:p-8">
+                <div className="text-slate-700 dark:text-slate-300 mb-6">ការសរសេរ Prompt ល្អ ត្រូវប្រាប់គោលបំណងឲ្យត្រង់ ដាក់ព័ត៌មានបរិបទដែលពាក់ព័ន្ធ និងបញ្ជាក់ Output ដែលចង់បាន។ អ្នកអាចប្រើ Template ងាយៗនេះបាន៖</div>
+                
+                <div className="bg-slate-50 dark:bg-slate-900/80 p-6 rounded-xl border border-slate-200 dark:border-slate-700 mb-6 font-mono text-sm leading-loose">
+                    <div><span className="text-sky-500 dark:text-sky-400 font-bold">• Role:</span> ឲ្យ AI ដើរតួអ្វី (អ្នកជា [role])</div>
+                    <div><span className="text-purple-500 dark:text-purple-400 font-bold">• Task:</span> ត្រូវធ្វើអ្វី (ភារកិច្ច: [task])</div>
+                    <div><span className="text-fuchsia-500 dark:text-fuchsia-400 font-bold">• Context:</span> ព័ត៌មានបន្ថែម (បរិបទ: [context])</div>
+                    <div><span className="text-emerald-500 dark:text-emerald-400 font-bold">• Constraints:</span> ច្បាប់កំណត់ (លក្ខខណ្ឌ: [constraints])</div>
+                    <div><span className="text-yellow-500 dark:text-yellow-400 font-bold">• Output format:</span> ចង់បានលទ្ធផលបែបណា (ទម្រង់លទ្ធផល: [format])</div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="bg-slate-100 dark:bg-slate-800/50 p-5 rounded-lg border border-slate-200 dark:border-slate-700">
+                        <h4 className="text-slate-900 dark:text-white font-bold mb-3">ឧទាហរណ៍ទី ១៖ បង្រៀន</h4>
+                        <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+                            <li><strong className="text-sky-600 dark:text-sky-400">Role:</strong> អ្នកជាគ្រូភាសាអង់គ្លេស។</li>
+                            <li><strong className="text-sky-600 dark:text-sky-400">Task:</strong> បង្រៀនខ្ញុំអំពី present simple tense</li>
+                            <li><strong className="text-sky-600 dark:text-sky-400">Context:</strong> ខ្ញុំជាអ្នកចាប់ផ្តើម និងចង់រៀនជាភាសាខ្មែរ</li>
+                            <li><strong className="text-sky-600 dark:text-sky-400">Constraints:</strong> ប្រើពាក្យងាយ, មានឧទាហរណ៍ ៥ ប្រយោគ</li>
+                            <li><strong className="text-sky-600 dark:text-sky-400">Format:</strong> បែងចែកជា ៣ ផ្នែក — និយមន័យ, របៀបប្រើ, ឧទាហរណ៍</li>
+                        </ul>
+                    </div>
+                    <div className="bg-slate-100 dark:bg-slate-800/50 p-5 rounded-lg border border-slate-200 dark:border-slate-700">
+                        <h4 className="text-slate-900 dark:text-white font-bold mb-3">ឧទាហរណ៍ទី ២៖ អ្នកសរសេរ Content</h4>
+                        <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+                            <li><strong className="text-purple-600 dark:text-purple-400">Role:</strong> អ្នកជាអ្នកនិពន្ធមាតិកាជាភាសាខ្មែរ។</li>
+                            <li><strong className="text-purple-600 dark:text-purple-400">Task:</strong> សរសេរអត្ថបទពីការរៀនភាសាអង់គ្លេសសម្រាប់អ្នកចាប់ផ្តើម។</li>
+                            <li><strong className="text-purple-600 dark:text-purple-400">Context:</strong> សម្រាប់អ្នកអាននៅកម្ពុជា</li>
+                            <li><strong className="text-purple-600 dark:text-purple-400">Constraints:</strong> ប្រើពាក្យងាយ, ប្រវែង ៣០០ ពាក្យ</li>
+                            <li><strong className="text-purple-600 dark:text-purple-400">Format:</strong> មានចំណងជើង និង bullet points សូមឆ្លើយជាភាសាខ្មែរ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="border-t border-slate-200 dark:border-slate-700 pt-8 mt-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                        <span className="text-2xl">💡</span> ចុះបើមិនសូវចេះអង់គ្លេស? (ដំណោះស្រាយ)
+                    </h3>
+                    <div className="space-y-4 text-slate-700 dark:text-slate-300 text-sm md:text-base">
+                        
+                        <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-sky-300 dark:hover:border-sky-700 transition-colors">
+                            <h4 className="font-bold text-sky-600 dark:text-sky-400 mb-2 text-lg">១. សរសេរជាភាសាខ្មែរផ្ទាល់ (Direct Khmer Prompt)</h4>
+                            <div className="mb-3 leading-relaxed">AI ជំនាន់ថ្មីៗដូចជា <strong className="text-slate-900 dark:text-white">ChatGPT (GPT-4)</strong>, <strong className="text-slate-900 dark:text-white">Gemini</strong>, ឬ <strong className="text-slate-900 dark:text-white">Claude</strong> មានសមត្ថភាពយល់ភាសាខ្មែរបានយ៉ាងល្អ។ អ្នកមិនចាំបាច់បកប្រែទេ គ្រាន់តែសរសេរអ្វីដែលអ្នកចង់បានជាភាសាខ្មែរដោយផ្ទាល់តែម្តង។</div>
+                            <div className="bg-white dark:bg-slate-900 p-3 rounded border border-slate-200 dark:border-slate-700 flex items-start gap-2">
+                                <span className="text-sky-500">👉 ឧទាហរណ៍៖</span>
+                                <span className="italic text-slate-600 dark:text-slate-400">"តើខ្ញុំគួររៀបចំផែនការអាជីវកម្មលក់កាហ្វេយ៉ាងដូចម្តេច?"</span>
+                            </div>
+                        </div>
+
+                        <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-purple-300 dark:hover:border-purple-700 transition-colors">
+                            <h4 className="font-bold text-purple-600 dark:text-purple-400 mb-2 text-lg">២. បញ្ជាឱ្យ AI ឆ្លើយជាខ្មែរជានិច្ច (Force Khmer Output)</h4>
+                            <div className="mb-3 leading-relaxed">ជួនកាល AI អាចយល់ភាសាខ្មែរ ប៉ុន្តែឆ្លើយតបមកវិញជាភាសាអង់គ្លេស។ ដើម្បីជៀសវាងបញ្ហានេះ សូមបន្ថែមឃ្លាបញ្ជាក់នៅចុងបញ្ចប់នៃ Prompt របស់អ្នកជានិច្ច។</div>
+                            <div className="bg-white dark:bg-slate-900 p-3 rounded border border-slate-200 dark:border-slate-700 flex flex-wrap items-center gap-2">
+                                <span className="text-purple-500">👉 ឃ្លាគន្លឹះ៖</span> 
+                                <code className="bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 px-2 py-1 rounded text-sm font-mono border border-purple-200 dark:border-purple-800">"សូមឆ្លើយតបជាភាសាខ្មែរ"</code>
+                                <span className="text-slate-400">ឬ</span>
+                                <code className="bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 px-2 py-1 rounded text-sm font-mono border border-purple-200 dark:border-purple-800">"Please answer in Khmer"</code>
+                            </div>
+                        </div>
+
+                        <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-fuchsia-300 dark:hover:border-fuchsia-700 transition-colors">
+                            <h4 className="font-bold text-fuchsia-600 dark:text-fuchsia-400 mb-2 text-lg">៣. ប្រើប្រាស់កម្មវិធីបកប្រែជាជំនួយការ (Bridge Translation)</h4>
+                            <div className="leading-relaxed">ប្រសិនបើអ្នកចង់បានលទ្ធផលដែលច្បាស់លាស់បំផុត ឬចង់សរសេរ Prompt ដែលមានភាពស្មុគស្មាញ ការសរសេរជាភាសាអង់គ្លេសគឺនៅតែល្អជាងគេ។ អ្នកអាចសរសេរជាខ្មែរ រួចយកទៅបកប្រែក្នុង Google Translate ហើយយកអង់គ្លេសនោះទៅបញ្ជា AI។ ពេល AI ឆ្លើយជាអង់គ្លេសរួចរាល់ អ្នកគ្រាន់តែប្រាប់វាថា <code className="bg-slate-200 dark:bg-slate-700 px-2 py-0.5 rounded text-sm">"Translate this to Khmer"</code> ដើម្បីបកប្រែត្រលប់មកវិញ។</div>
+                        </div>
+
+                        <div className="bg-slate-50 dark:bg-slate-800/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-700 transition-colors">
+                            <h4 className="font-bold text-emerald-600 dark:text-emerald-400 mb-2 text-lg">៤. ប្រើពាក្យសាមញ្ញ និងប្រយោគខ្លីៗ (Keep it Simple)</h4>
+                            <div className="leading-relaxed">ពេលបញ្ជា AI ជាភាសាខ្មែរ សូមព្យាយាមប្រើពាក្យផ្លូវការ ឬពាក្យសាមញ្ញងាយយល់ ចៀសវាងការប្រើពាក្យកាត់ (Slang) ពាក្យលេងសើច ឬពាក្យសរសេរខុសអក្ខរាវិរុទ្ធច្រើនពេក ព្រោះអាចធ្វើឱ្យ AI យល់ច្រឡំអត្ថន័យ និងផ្តល់ចម្លើយខុស។</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div className="section-divider animate-fade-in-up delay-200"></div>
+
+        {/* 3. 50 Prompts Section */}
+        <section className="mb-16 animate-fade-in-up delay-300 text-slate-900 dark:text-white">
+            <Top50PromptsTabs />
+        </section>
+
+    </div>
+</div>

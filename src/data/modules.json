@@ -24,19 +24,24 @@
     "description": "",
     "slug": "chapter-2-understanding-ai",
     "order": 2,
-    "icon": "Brain",
+    "icon": "BookOpen",
     "lessons": [
       {
         "slug": "what-is-ai-and-top-50-tools",
-        "title": "ស្វែងយល់ពីបញ្ញាសិប្បនិម្មិត (AI)",
+        "title": "ស្វែងយល់ស៊ីជម្រៅពីបញ្ញាសិប្បនិម្មិត (AI)",
         "description": "តើ AI ជាអ្វី? តើវាដំណើរការយ៉ាងដូចម្តេច? និងការលាតត្រដាងកំពូលអាវុធ (AI Tools) ទាំង ៥០",
-        "duration": "15 min",
+        "duration": "10 min",
         "order": 1,
-        "keywords": [
-          "ai",
-          "tools",
-          "top 50"
-        ],
+        "keywords": [],
+        "type": "reading"
+      },
+      {
+        "slug": "prompt-engineering",
+        "title": "ពាក្យបញ្ជារ (Prompt)",
+        "description": "ស្វែងយល់ពីគន្លឹះ រូបមន្ត និងកម្រង Prompt ទាំង ៥០ ដើម្បីបញ្ជា AI ឱ្យធ្វើការជំនួសអ្នកបានយ៉ាងត្រឹមត្រូវ។",
+        "duration": "10 min",
+        "order": 2,
+        "keywords": [],
         "type": "reading"
       }
     ]

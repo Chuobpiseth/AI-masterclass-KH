@@ -12,10 +12,12 @@ import { TextSizeSwitcher } from "@/components/shared/TextSizeSwitcher";
 import { SearchBar } from "@/components/shared/SearchBar";
 import { CourseSidebar } from "@/components/layout/Sidebar";
 import { useAuthStore } from "@/store/auth-store";
+import { useSidebarStore } from "@/store/sidebar-store";
 import { siteConfig } from "@/config/site";
 
 export function Header() {
   const { studentName, logout } = useAuthStore();
+  const { toggle: toggleDesktopSidebar } = useSidebarStore();
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -58,14 +60,23 @@ export function Header() {
               </SheetContent>
             </Sheet>
 
+            {/* Desktop menu toggle */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hidden lg:flex h-9 w-9 rounded-xl"
+              onClick={toggleDesktopSidebar}
+              aria-label="Toggle sidebar"
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
+
             {/* Logo */}
             <Link
               href="/dashboard"
               className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/70 shadow-lg shadow-primary/20">
-                <Sparkles className="h-4 w-4 text-primary-foreground" />
-              </div>
+              <img src="/assets/logo.png" alt="Logo" className="h-10 w-10 rounded-full object-cover" />
               <div className="hidden sm:block">
                 <h1 className="text-sm font-bold leading-none tracking-tight">
                   {siteConfig.name}
