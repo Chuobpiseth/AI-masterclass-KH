@@ -22,7 +22,11 @@
         "description": "ការណែនាំលម្អិតពីរបៀបបង្កើតគណនី Gmail ថ្មី និងការរៀបចំប្រព័ន្ធការពារសុវត្ថិភាព 2-Step Verification ដើម្បីការពារពីការលួចគណនី។",
         "duration": "15 min",
         "order": 2,
-        "keywords": ["gmail", "security", "2fa"],
+        "keywords": [
+          "gmail",
+          "security",
+          "2fa"
+        ],
         "type": "reading"
       }
     ]
