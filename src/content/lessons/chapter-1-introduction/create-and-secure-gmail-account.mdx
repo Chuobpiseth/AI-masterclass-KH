@@ -1,0 +1,202 @@
+<style>{`
+  /* Custom Animations */
+  @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+  }
+
+  .custom-gmail-lesson .animate-fade-in-up {
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+  }
+
+  .custom-gmail-lesson .animate-float {
+      animation: float 4s ease-in-out infinite;
+  }
+
+  /* Delays */
+  .custom-gmail-lesson .delay-100 { animation-delay: 0.1s; }
+  .custom-gmail-lesson .delay-200 { animation-delay: 0.2s; }
+  .custom-gmail-lesson .delay-300 { animation-delay: 0.3s; }
+`}</style>
+
+<div className="not-prose custom-gmail-lesson font-sans antialiased -mx-4 sm:-mx-6 lg:-mx-8 -my-12 px-4 sm:px-6 lg:px-8 py-16 relative overflow-hidden transition-colors duration-300 bg-slate-50 dark:bg-[#020617] text-slate-800 dark:text-slate-100 min-h-screen">
+    
+    {/* Dark Mode Background Gradients */}
+    <div className="absolute inset-0 z-0 pointer-events-none opacity-0 dark:opacity-100 transition-opacity duration-300 bg-[radial-gradient(at_0%_0%,rgba(16,14,35,1)_0,transparent_50%),radial-gradient(at_100%_100%,rgba(46,65,106,0.2)_0,transparent_50%),radial-gradient(at_100%_0%,rgba(114,39,71,0.2)_0,transparent_50%)]"></div>
+
+    <div className="max-w-5xl mx-auto relative z-10">
+        
+        {/* Header Section */}
+        <header className="text-center mb-16 animate-fade-in-up">
+            <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/80 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-sky-600 dark:text-sky-400 text-sm font-semibold tracking-widest uppercase shadow-sm">
+                ជំពូកទី ១ • មេរៀនទី ២
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 !mt-0 border-0 text-slate-900 dark:text-white">
+                របៀបបង្កើត <span className="bg-gradient-to-r from-sky-500 to-purple-600 dark:from-sky-400 dark:via-indigo-400 dark:to-fuchsia-400 bg-clip-text text-transparent">Gmail</span> <br className="hidden sm:block"/><br/>និងការពារសុវត្ថិភាពខ្ពស់
+            </h1>
+            <p className="text-slate-600 dark:text-slate-400 text-lg max-w-3xl mx-auto">
+                មុននឹងប្រើប្រាស់ AI ជំហានដំបូងគឺត្រូវមានគណនី Gmail ផ្ទាល់ខ្លួនមួយដែលសុវត្ថិភាព។ ហេតុអ្វី? ព្រោះគណនី Google មួយនេះអាចឱ្យអ្នកចុះឈ្មោះប្រើប្រាស់ AI ស្ទើរតែទាំងអស់លើលោកបានយ៉ាងងាយ!
+            </p>
+        </header>
+
+        {/* Part 1: Account Creation (Timeline) */}
+        <section className="mb-16 animate-fade-in-up delay-100">
+            <div className="bg-white/60 dark:bg-slate-800/40 backdrop-blur-xl border border-slate-200 dark:border-white/10 border-t-4 border-t-sky-500 rounded-3xl p-6 md:p-10 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white/80 dark:hover:bg-slate-800/70 group">
+                <div className="flex items-center gap-4 mb-8">
+                    <div className="w-14 h-14 rounded-2xl bg-sky-100 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 flex items-center justify-center animate-float">
+                        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <div>
+                        <h2 className="text-2xl font-bold text-slate-800 dark:text-white !mt-0 border-0">ផ្នែកទី ១៖ ការបង្កើតគណនី Gmail ថ្មី</h2>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm m-0">បើសិនជាអ្នកមានរួចហើយ អាចរំលងទៅផ្នែកទី ២ បាន។</p>
+                    </div>
+                </div>
+
+                <div className="relative pl-8">
+                    {/* Timeline vertical line */}
+                    <div className="absolute left-3 top-2 bottom-2 w-0.5 bg-sky-200 dark:bg-sky-400/20"></div>
+
+                    {/* Step 1 */}
+                    <div className="relative mb-8">
+                        <div className="absolute -left-7 top-1 w-[22px] h-[22px] rounded-full bg-white dark:bg-slate-900 border-2 border-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.5)] z-10"></div>
+                        <h3 className="text-lg font-bold text-sky-600 dark:text-sky-400 mb-2 !mt-0">ជំហានទី ១៖ ចូលទៅកាន់គេហទំព័រ Google</h3>
+                        <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2 ml-2 text-sm md:text-base m-0 p-0">
+                            <li>បើកកម្មវិធីរុករក (Browser) វាយអាសយដ្ឋាន៖ <code className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sky-600 dark:text-sky-300 font-mono">gmail.com</code></li>
+                            <li>ចុចលើប៊ូតុង <strong className="text-slate-800 dark:text-white">"Create account" (បង្កើតគណនី)</strong>។</li>
+                            <li>ជ្រើសរើស <strong className="text-slate-800 dark:text-white">"For my personal use"</strong>។</li>
+                        </ul>
+                    </div>
+
+                    {/* Step 2 */}
+                    <div className="relative mb-8">
+                        <div className="absolute -left-7 top-1 w-[22px] h-[22px] rounded-full bg-white dark:bg-slate-900 border-2 border-purple-400 shadow-[0_0_10px_rgba(192,132,252,0.5)] z-10"></div>
+                        <h3 className="text-lg font-bold text-purple-600 dark:text-purple-400 mb-2 !mt-0">ជំហានទី ២៖ បំពេញព័ត៌មានផ្ទាល់ខ្លួន</h3>
+                        <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2 ml-2 text-sm md:text-base m-0 p-0">
+                            <li>បញ្ជូលឈ្មោះ ថ្ងៃខែឆ្នាំកំណើត និងភេទរបស់អ្នក។</li>
+                            <li>ជ្រើសរើសយកឈ្មោះអ៊ីមែលមួយ ឬសរសេរឈ្មោះខ្លួនឯង (ឧ. <code className="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-purple-600 dark:text-purple-300 font-mono">sok.ai.creator@gmail.com</code>)។</li>
+                            <li className="pb-2">
+                                <strong className="text-slate-800 dark:text-white">ពាក្យសម្ងាត់ (Password):</strong> ត្រូវមាន អក្សរធំ អក្សរតូច លេខ និងសញ្ញាពិសេស។ <br/>
+                                <span className="text-rose-500 dark:text-rose-400 text-xs ml-5 inline-block mt-1">*គន្លឹះ៖ កុំប្រើលេខទូរស័ព្ទ ឬថ្ងៃខែឆ្នាំកំណើត!</span>
+                                
+                                {/* Password Examples */}
+                                <div className="mt-3 ml-5 bg-white/50 dark:bg-slate-800/50 rounded-lg p-3 border border-slate-200 dark:border-slate-700/50 w-fit">
+                                    <p className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2 m-0 flex items-center gap-1">
+                                        <svg className="w-3.5 h-3.5 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                        ឧទាហរណ៍ Password រឹងមាំ (សូមកុំចម្លងយក)៖
+                                    </p>
+                                    <div className="flex flex-wrap gap-2">
+                                        <code className="bg-white dark:bg-slate-900 px-2 py-1 rounded text-[11px] md:text-xs font-mono text-purple-600 dark:text-purple-400 border border-slate-200 dark:border-slate-700">Khmer@AI2026!</code>
+                                        <code className="bg-white dark:bg-slate-900 px-2 py-1 rounded text-[11px] md:text-xs font-mono text-purple-600 dark:text-purple-400 border border-slate-200 dark:border-slate-700">Master#Class$99</code>
+                                        <code className="bg-white dark:bg-slate-900 px-2 py-1 rounded text-[11px] md:text-xs font-mono text-purple-600 dark:text-purple-400 border border-slate-200 dark:border-slate-700">SokSan*2026?</code>
+                                        <code className="bg-white dark:bg-slate-900 px-2 py-1 rounded text-[11px] md:text-xs font-mono text-purple-600 dark:text-purple-400 border border-slate-200 dark:border-slate-700">Cambodia^Tech88</code>
+                                        <code className="bg-white dark:bg-slate-900 px-2 py-1 rounded text-[11px] md:text-xs font-mono text-purple-600 dark:text-purple-400 border border-slate-200 dark:border-slate-700">LearnAI@100%</code>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="relative mb-0">
+                        <div className="absolute -left-7 top-1 w-[22px] h-[22px] rounded-full bg-white dark:bg-slate-900 border-2 border-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)] z-10"></div>
+                        <h3 className="text-lg font-bold text-emerald-600 dark:text-emerald-400 mb-2 !mt-0">ជំហានទី ៣៖ ការផ្ទៀងផ្ទាត់ (Verification)</h3>
+                        <ul className="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-2 ml-2 text-sm md:text-base m-0 p-0">
+                            <li>បញ្ចូលលេខទូរស័ព្ទពិតប្រាកដ ដើម្បីទទួលលេខកូដ ៦ ខ្ទង់។</li>
+                            <li><strong className="text-slate-800 dark:text-white">Recovery Email:</strong> បញ្ចូលអ៊ីមែលទី២ សម្រាប់សង្គ្រោះ (បើមាន)។</li>
+                            <li>ចុច <strong className="text-slate-800 dark:text-white">"I agree" (ខ្ញុំយល់ព្រម)</strong> ជាការស្រេច! 🎉</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Part 2: Advanced Security */}
+        <section className="animate-fade-in-up delay-200">
+            <div className="bg-white/60 dark:bg-slate-800/40 backdrop-blur-xl border border-slate-200 dark:border-white/10 border-t-4 border-t-purple-500 rounded-3xl p-6 md:p-10 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-white/80 dark:hover:bg-slate-800/70 group">
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center animate-float" style={{animationDelay: "0.5s"}}>
+                        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    </div>
+                    <div>
+                        <h2 className="text-2xl font-bold text-slate-800 dark:text-white !mt-0 border-0">ផ្នែកទី ២៖ ការការពារសុវត្ថិភាពកម្រិតខ្ពស់ (2FA)</h2>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm m-0">នៅឆ្នាំ ២០២៦ ការមានត្រឹម Password មួយគឺមិនមានសុវត្ថិភាពឡើយ!</p>
+                    </div>
+                </div>
+
+                <div className="bg-slate-100 dark:bg-slate-900/50 rounded-xl p-4 mb-8 border border-slate-200 dark:border-slate-700">
+                    <p className="text-slate-600 dark:text-slate-300 text-sm m-0"><strong className="text-slate-800 dark:text-white">របៀបបើក៖</strong> ចូលទៅកាន់ <span className="text-sky-600 dark:text-sky-400 font-semibold">Manage your Google Account</span> &gt; ជ្រើសរើស <span className="text-sky-600 dark:text-sky-400 font-semibold">Security</span> &gt; ចុចលើ <span className="text-sky-600 dark:text-sky-400 font-semibold">2-Step Verification</span> ហើយវាយ Password ម្តងទៀតដើម្បីបញ្ជាក់។</p>
+                </div>
+
+                <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-4 !mt-0">ជម្រើសវិធីសាស្ត្រការពារទី ២ (Second Step Options)៖</h3>
+                
+                {/* 2FA Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    {/* Option 1 */}
+                    <div className="bg-white/50 dark:bg-slate-800/40 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 hover:border-sky-400 dark:hover:border-sky-500/50 transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                            <span className="text-2xl">📱</span>
+                            <h4 className="font-bold text-sky-600 dark:text-sky-400 !m-0 border-0">Google Prompts</h4>
+                        </div>
+                        <span className="inline-block px-2 py-0.5 bg-sky-100 dark:bg-sky-500/20 text-sky-700 dark:text-sky-300 text-[10px] uppercase rounded mb-2 font-bold">ណែនាំបំផុត (Recommended)</span>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed m-0">ពេល Log in លើម៉ាស៊ីនផ្សេង ទូរស័ព្ទនឹងលោតសារសួរ។ អ្នកគ្រាន់តែចុច <strong className="text-slate-800 dark:text-white">"Yes, it's me"</strong> ដើម្បីចូល។ លឿននិងការពារការលួចស៊ីមបានល្អ។</p>
+                    </div>
+
+                    {/* Option 2 */}
+                    <div className="bg-white/50 dark:bg-slate-800/40 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 hover:border-purple-400 dark:hover:border-purple-500/50 transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                            <span className="text-2xl">🔐</span>
+                            <h4 className="font-bold text-purple-600 dark:text-purple-400 !m-0 border-0">Authenticator App</h4>
+                        </div>
+                        <span className="inline-block px-2 py-0.5 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 text-[10px] uppercase rounded mb-2 font-bold">សុវត្ថិភាពខ្ពស់</span>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed m-0">ប្រើ App (Google Authenticator) វានឹងបង្កើតលេខកូដ ៦ ខ្ទង់ថ្មីរៀងរាល់ ៣០វិនាទី ទោះគ្មានអ៊ីនធឺណិតក៏ដោយ។ ពេញនិយមសម្រាប់អ្នក IT។</p>
+                    </div>
+
+                    {/* Option 3 */}
+                    <div className="bg-white/50 dark:bg-slate-800/40 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 hover:border-emerald-400 dark:hover:border-emerald-500/50 transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                            <span className="text-2xl">👆</span>
+                            <h4 className="font-bold text-emerald-600 dark:text-emerald-400 !m-0 border-0">Passkeys</h4>
+                        </div>
+                        <span className="inline-block px-2 py-0.5 bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-[10px] uppercase rounded mb-2 font-bold">បច្ចេកវិទ្យាថ្មីបំផុត ២០២៦</span>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed m-0">ជំនួសការវាយ Password ដោយប្រើស្នាមម្រាមដៃ (Fingerprint) ស្កេនមុខ (Face ID) ឬ PIN។ ការពារការបន្លំ (Phishing) បាន ១០០%។</p>
+                    </div>
+
+                    {/* Option 4 */}
+                    <div className="bg-white/50 dark:bg-slate-800/40 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 hover:border-fuchsia-400 dark:hover:border-fuchsia-500/50 transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                            <span className="text-2xl">📄</span>
+                            <h4 className="font-bold text-fuchsia-600 dark:text-fuchsia-400 !m-0 border-0">Backup Codes</h4>
+                        </div>
+                        <span className="inline-block px-2 py-0.5 bg-fuchsia-100 dark:bg-fuchsia-500/20 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] uppercase rounded mb-2 font-bold">ត្រូវតែមាន (Must Have)</span>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed m-0">កូដសង្គ្រោះបន្ទាន់ ១០ខ្ទង់។ ត្រូវ<strong className="text-slate-800 dark:text-white">ព្រីន ឬកត់ទុកកន្លែងសុវត្ថិភាព</strong>។ ប្រើពេលអ្នកបាត់ទូរស័ព្ទ (កូដមួយខ្សែប្រើបានតែម្តងប៉ុណ្ណោះ)។</p>
+                    </div>
+                </div>
+
+                <div className="border-t border-slate-200 dark:border-slate-700/50 pt-6">
+                    <h3 className="text-md font-bold text-rose-500 dark:text-rose-400 mb-2 !mt-0">⚠️ ជំហានទី ៤៖ Review 3rd-Party Access</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed m-0">
+                        ពេលអ្នកចុះឈ្មោះប្រើ AI ច្រើន អ្នកត្រូវឧស្សាហ៍ចូលទៅ <span className="text-sky-600 dark:text-sky-400 font-semibold">Security</span> &gt; <span className="text-sky-600 dark:text-sky-400 font-semibold">Your connections to third-party apps</span>។ បើឃើញ App ណាមិនស្គាល់ សូមចុច <strong className="text-slate-800 dark:text-white">"Delete all connections..."</strong> ជាបន្ទាន់!
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        {/* Conclusion */}
+        <div className="mt-12 text-center animate-fade-in-up delay-300">
+            <div className="inline-block bg-white/60 dark:bg-slate-800/40 backdrop-blur-xl rounded-2xl p-6 border border-emerald-300 dark:border-emerald-500/30 shadow-lg">
+                <p className="text-slate-700 dark:text-slate-300 mb-4 max-w-2xl mx-auto m-0">
+                    🎉 <strong className="text-slate-900 dark:text-white">អបអរសាទរ!</strong> ឥឡូវនេះអ្នកទទួលបានគណនី Gmail ដែលមានសុវត្ថិភាពកម្រិតខ្ពស់។ គណនីនេះនឹងក្លាយជា <strong className="text-amber-500 dark:text-yellow-400">"សោរមាស"</strong> សម្រាប់បើកទ្វារចូលទៅកាន់ពិភពនៃ AI គ្រប់ប្រភេទ!
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
